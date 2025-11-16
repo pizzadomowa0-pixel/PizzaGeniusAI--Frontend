@@ -11,8 +11,14 @@ export default function EquipmentPage() {
 
   return (
     <div>
-      <button className="absolute top-4 left-4 p-2 rounded bg-gray-200 hover:bg-gray-300"
-        onClick={() => navigate(-1)}>← Wstecz</button>
+      {/* Przycisk Wstecz zawsze kieruje do WelcomePage */}
+      <button
+        className="absolute top-4 left-4 p-2 rounded bg-gray-200 hover:bg-gray-300"
+        onClick={() => navigate("/")} // "/" to typowa ścieżka do WelcomePage
+      >
+        ← Wstecz
+      </button>
+
       <EquipmentSelector onSelect={handleSelectEquipment} />
     </div>
   );
